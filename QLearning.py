@@ -180,9 +180,9 @@ class Board:
 
     def generateKey(self, sign):
         val = 9
-        filled_grid = copy.deepcopy(self.grid)
-        n.place(filled_grid, n.isnan(filled_grid), val)
-        return "".join(map(str, (list(map(int, filled_grid.flatten()))))) + sign
+        filledGrid = copy.deepcopy(self.grid)
+        n.place(filledGrid, n.isnan(filledGrid), val)
+        return "".join(map(str, (list(map(int, filledGrid.flatten()))))) + sign
 
     def dishReward(self):
         if self.over():
